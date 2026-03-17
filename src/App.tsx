@@ -13,6 +13,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignupPage";
 import MyPage from "./pages/MyPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import TestPage from "./pages/TestPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         {/* 인증 페이지 (레이아웃 없음) */}
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/test" element={<TestPage />} />
 
         {/* 공통 레이아웃 적용 */}
         <Route element={<Layout />}>
