@@ -27,6 +27,7 @@ function App() {
         <Route path="/test" element={<TestPage />} />
         <Route path="/gogo" element={<Gogo />} />
         <Route path="/gogo/hi" element={<Gogogo />} />
+        <Route path="/go" element={<Gogo />} />
 
         {/* 공통 레이아웃 적용 */}
         <Route element={<Layout />}>
