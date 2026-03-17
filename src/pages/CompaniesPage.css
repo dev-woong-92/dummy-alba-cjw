@@ -1,0 +1,70 @@
+.companies-page { padding: 40px 20px; }
+.companies-inner { max-width: 1200px; margin: 0 auto; }
+.page-header { margin-bottom: 32px; }
+.page-header h1 { font-size: 28px; font-weight: 800; color: #111827; margin-bottom: 8px; }
+.page-header p { color: #6b7280; font-size: 15px; }
+
+.companies-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.company-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 28px;
+  text-decoration: none;
+  color: #111827;
+  transition: all 0.2s;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.company-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 8px 24px rgba(249,115,22,0.1);
+  transform: translateY(-2px);
+}
+.company-card-logo {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
+.company-card-info { flex: 1; }
+.company-card-industry { font-size: 11px; color: #f97316; font-weight: 600; margin-bottom: 4px; }
+.company-card-name { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.star-rating { color: #f59e0b; font-size: 14px; }
+.rating-num { color: #374151; font-size: 13px; margin-left: 6px; font-weight: 600; }
+.company-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b7280;
+  margin: 10px 0;
+}
+.open-jobs-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: #fff7ed;
+  color: #f97316;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .companies-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .companies-grid { grid-template-columns: 1fr; }
+}
