@@ -14,6 +14,7 @@ import SignupPage from "./pages/SignupPage";
 import MyPage from "./pages/MyPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import TestPage from "./pages/TestPage";
+import Gogo from "./pages/Gogo";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/test" element={<TestPage />} />
+        <Route path="/gogo" element={<Gogo />} />
 
         {/* 공통 레이아웃 적용 */}
         <Route element={<Layout />}>
