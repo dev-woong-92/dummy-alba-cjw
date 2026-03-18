@@ -18,6 +18,7 @@ import Gogo from "./pages/Gogo";
 import Gogogo from "./pages/Gogogo";
 import Jk from "./pages/Jk";
 import JobApplicationForm from "./pages/JobApplicationForm";
+import Dd from "./pages/Dd";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
         <Route path="/gogo/hi" element={<Gogogo />} />
         <Route path="/gogo/kk" element={<Jk />} />
         <Route path="/apply" element={<JobApplicationForm />} />
+        <Route path="/gh" element={<Dd />} />
 
         {/* 공통 레이아웃 적용 */}
         <Route element={<Layout />}>
