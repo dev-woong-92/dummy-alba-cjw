@@ -16,6 +16,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import TestPage from "./pages/TestPage";
 import Gogo from "./pages/Gogo";
 import Gogogo from "./pages/Gogogo";
+import Jk from "./pages/Jk";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/test" element={<TestPage />} />
         <Route path="/gogo" element={<Gogo />} />
         <Route path="/gogo/hi" element={<Gogogo />} />
+        <Route path="/gogo/kk" element={<Jk />} />
 
         {/* 공통 레이아웃 적용 */}
         <Route element={<Layout />}>
