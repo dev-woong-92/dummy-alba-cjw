@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 /* 전역 CSS 리셋 및 기본 스타일 */
 *, *::before, *::after {
   box-sizing: border-box;
