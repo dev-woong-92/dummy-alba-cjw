@@ -18,6 +18,7 @@ import Gogo from "./pages/Gogo";
 import Gogogo from "./pages/Gogogo";
 import Jk from "./pages/Jk";
 import JobApplicationForm from "./pages/JobApplicationForm";
+import JobApplicationForm from "./pages/JobApplicationForm";
 
 function App() {
   return (
@@ -47,6 +48,8 @@ function App() {
           {/* 이력서 */}
           <Route path="/resume" element={<ResumePage />} />
           <Route path="/resume/create" element={<ResumeCreatePage />} />
+
+          <Route path="/apply" element={<JobApplicationForm />} />
 
           {/* 커뮤니티 */}
           <Route path="/community" element={<CommunityPage />} />
