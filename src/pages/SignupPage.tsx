@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import "./LoginPage.css";
-import "./SignupPage.css";
 
 type UserType = "worker" | "employer";
 
@@ -39,109 +37,75 @@ function SignupPage() {
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-box signup-box">
-        <Link to="/" className="auth-logo">
-          <span style={{ color: "#f97316" }}>알</span>
-          <span style={{ color: "#fb923c" }}>바</span>
-          <span style={{ color: "#fdba74" }}>몬</span>
+    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-orange-200 flex items-center justify-center p-5">
+      <div className="bg-white rounded-[20px] p-12 w-full max-w-[480px] shadow-[0_20px_60px_rgba(0,0,0,0.08)] text-center">
+        <Link to="/" className="text-4xl font-black tracking-tight no-underline inline-block mb-6">
+          <span className="text-orange-500">알</span>
+          <span className="text-orange-400">바</span>
+          <span className="text-orange-300">몬</span>
         </Link>
 
-        <h2>회원가입</h2>
-        <p className="auth-sub">알바몬 회원이 되어 더 많은 혜택을 누리세요</p>
+        <h2 className="text-2xl font-extrabold text-gray-900 mb-2">회원가입</h2>
+        <p className="text-sm text-gray-500 mb-8">알바몬 회원이 되어 더 많은 혜택을 누리세요</p>
 
-        <div className="user-type-tabs">
+        <div className="flex mb-7 border border-gray-200 rounded-[10px] overflow-hidden">
           <button
             type="button"
-            className={`type-tab ${userType === "worker" ? "active" : ""}`}
+            className={`flex-1 py-3 border-none text-[15px] font-semibold cursor-pointer transition-all ${userType === "worker" ? "bg-orange-500 text-white" : "bg-white text-gray-500"}`}
             onClick={() => setUserType("worker")}
           >
             👤 구직자
           </button>
           <button
             type="button"
-            className={`type-tab ${userType === "employer" ? "active" : ""}`}
+            className={`flex-1 py-3 border-none text-[15px] font-semibold cursor-pointer transition-all ${userType === "employer" ? "bg-orange-500 text-white" : "bg-white text-gray-500"}`}
             onClick={() => setUserType("employer")}
           >
             🏢 사업주
           </button>
         </div>
 
-        <form onSubmit={handleSubmit} className="auth-form">
-          <div className="auth-field">
-            <label>이름 *</label>
-            <input
-              type="text"
-              name="name"
-              placeholder="홍길동"
-              value={form.name}
-              onChange={handleChange}
-              required
-            />
+        <form onSubmit={handleSubmit} className="text-left">
+          <div className="flex flex-col gap-1.5 mb-4">
+            <label className="text-[13px] font-semibold text-gray-700">이름 *</label>
+            <input type="text" name="name" placeholder="홍길동" value={form.name} onChange={handleChange} required className="px-4 py-3 border border-gray-200 rounded-[10px] text-[15px] outline-none transition-colors focus:border-orange-500" />
           </div>
-          <div className="auth-field">
-            <label>이메일 *</label>
-            <input
-              type="email"
-              name="email"
-              placeholder="example@email.com"
-              value={form.email}
-              onChange={handleChange}
-              required
-            />
+          <div className="flex flex-col gap-1.5 mb-4">
+            <label className="text-[13px] font-semibold text-gray-700">이메일 *</label>
+            <input type="email" name="email" placeholder="example@email.com" value={form.email} onChange={handleChange} required className="px-4 py-3 border border-gray-200 rounded-[10px] text-[15px] outline-none transition-colors focus:border-orange-500" />
           </div>
-          <div className="auth-field">
-            <label>비밀번호 *</label>
-            <input
-              type="password"
-              name="password"
-              placeholder="8자 이상 입력"
-              value={form.password}
-              onChange={handleChange}
-              required
-            />
+          <div className="flex flex-col gap-1.5 mb-4">
+            <label className="text-[13px] font-semibold text-gray-700">비밀번호 *</label>
+            <input type="password" name="password" placeholder="8자 이상 입력" value={form.password} onChange={handleChange} required className="px-4 py-3 border border-gray-200 rounded-[10px] text-[15px] outline-none transition-colors focus:border-orange-500" />
           </div>
-          <div className="auth-field">
-            <label>비밀번호 확인 *</label>
-            <input
-              type="password"
-              name="passwordConfirm"
-              placeholder="비밀번호 재입력"
-              value={form.passwordConfirm}
-              onChange={handleChange}
-              required
-            />
+          <div className="flex flex-col gap-1.5 mb-4">
+            <label className="text-[13px] font-semibold text-gray-700">비밀번호 확인 *</label>
+            <input type="password" name="passwordConfirm" placeholder="비밀번호 재입력" value={form.passwordConfirm} onChange={handleChange} required className="px-4 py-3 border border-gray-200 rounded-[10px] text-[15px] outline-none transition-colors focus:border-orange-500" />
           </div>
-          <div className="auth-field">
-            <label>휴대폰 번호</label>
-            <input
-              type="tel"
-              name="phone"
-              placeholder="010-0000-0000"
-              value={form.phone}
-              onChange={handleChange}
-            />
+          <div className="flex flex-col gap-1.5 mb-4">
+            <label className="text-[13px] font-semibold text-gray-700">휴대폰 번호</label>
+            <input type="tel" name="phone" placeholder="010-0000-0000" value={form.phone} onChange={handleChange} className="px-4 py-3 border border-gray-200 rounded-[10px] text-[15px] outline-none transition-colors focus:border-orange-500" />
           </div>
 
-          <div className="agree-section">
-            <label className="agree-all">
+          <div className="bg-gray-50 border border-gray-200 rounded-[10px] p-4 mb-5">
+            <label className="flex items-center gap-2 text-sm font-bold text-gray-900 mb-3 cursor-pointer">
               <input type="checkbox" /> 전체 동의
             </label>
-            <div className="agree-items">
-              <label><input type="checkbox" required /> [필수] 이용약관 동의</label>
-              <label><input type="checkbox" required /> [필수] 개인정보 수집 및 이용 동의</label>
-              <label><input type="checkbox" /> [선택] 마케팅 정보 수신 동의</label>
+            <div className="flex flex-col gap-2 pl-1">
+              <label className="flex items-center gap-2 text-[13px] text-gray-700 cursor-pointer"><input type="checkbox" required /> [필수] 이용약관 동의</label>
+              <label className="flex items-center gap-2 text-[13px] text-gray-700 cursor-pointer"><input type="checkbox" required /> [필수] 개인정보 수집 및 이용 동의</label>
+              <label className="flex items-center gap-2 text-[13px] text-gray-700 cursor-pointer"><input type="checkbox" /> [선택] 마케팅 정보 수신 동의</label>
             </div>
           </div>
 
-          <button type="submit" className="auth-submit">
+          <button type="submit" className="w-full py-3.5 bg-orange-500 text-white border-none rounded-[10px] text-base font-bold cursor-pointer transition-colors hover:bg-orange-600">
             가입하기
           </button>
         </form>
 
-        <div className="auth-footer">
+        <div className="mt-7 text-sm text-gray-500">
           이미 회원이신가요?{" "}
-          <Link to="/login">로그인</Link>
+          <Link to="/login" className="text-orange-500 font-bold no-underline">로그인</Link>
         </div>
       </div>
     </div>
