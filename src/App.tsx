@@ -10,7 +10,7 @@ import ResumeCreatePage from "./pages/ResumeCreatePage";
 import CommunityPage from "./pages/CommunityPage";
 import CommunityDetailPage from "./pages/CommunityDetailPage";
 import LoginPage from "./pages/LoginPage";
-import SignupPage from "./pages/SignupPage";
+import Signuppage from "./pages/Signuppage";
 import MyPage from "./pages/MyPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import TestPage from "./pages/TestPage";
@@ -27,7 +27,7 @@ function App() {
       <Routes>
         {/* 인증 페이지 (레이아웃 없음) */}
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+<Route path="/signup" element={<Signuppage />} />
         <Route path="/test" element={<TestPage />} />
         <Route path="/gogo" element={<Gogo />} />
         <Route path="/gogo/hi" element={<Gogogo />} />
